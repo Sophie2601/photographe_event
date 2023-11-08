@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const boutonContact = document.querySelector(".favorite.styled");
   const popupContact = document.getElementById("popupContact");
   const fermerPopupContact = document.getElementById("fermerPopupContact");
-  const refDisplayElement = document.getElementById('photoReference'); 
+  const refDisplayElement = document.querySelector('input[name="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"]'); 
   boutonContact.addEventListener("click", function() {
-      const photoRefElement = document.querySelector('.single-photo-txt:nth-child(4)');
+      const photoRefElement = document.querySelector('.single-photo-txt:nth-child(5)');
       let photoRef = "";
       if (photoRefElement) {
           photoRef = photoRefElement.textContent.split(' : ')[1].trim();

@@ -6,6 +6,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   left: 110px;
   width: calc(50% - 18.5px); /* Deux colonnes avec un espace entre */
   aspect-ratio: 1/1;
@@ -19,8 +20,8 @@
   position: relative;
 }
 .gallery-item img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -112,9 +113,15 @@ header {
 .menu {
   display: flex;
   margin-left: 850px;
+  top: 0px;
 }
 .menu li {
   list-style: none;
+}
+
+.menu-item-91 {
+  position: relative;
+  left: 70px;
 }
 
 .logo {
@@ -126,8 +133,7 @@ header {
 }
 
 nav {
-  position: relative;
-  top: -35px;
+  margin-top: -40px;
 }
 
 a {
@@ -163,69 +169,27 @@ a {
   margin-top: 145px;
 }
 
-#menu-item-9 {
-  position: relative;
-  left: 30px;
-}
-
-#menu-item-91 {
-  position: relative;
-  left: 95px;
-}
-
-/* Styles par défaut pour le menu burger (à masquer) */
-@media screen and (min-width: 768px) {
-  #wpadminbar {
-    display: none;
-  }
-  .container {
-    display: none;
-  }
-}
-/* Styles par défaut pour le menu de navigation (à masquer) */
-.nav {
-  display: none;
-}
-
-/* Media query pour les écrans mobiles */
-@media screen and (max-width: 768px) {
-  #wpadminbar {
-    display: none;
-  }
-  .body {
-    margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
-  }
-  .banner {
-    position: relative;
-    top: 30px;
-  }
-}
-/* Menu burger */
-.container {
-  margin: auto;
-}
-
-/* Burger Icon */
-#burger {
-  position: relative;
-  margin: auto;
-  height: 30px;
-  width: 50px;
-  top: 60px;
-  left: 400px;
+/*Menu Burger*/
+.navbar {
+  background-color: #333;
+  color: #fff;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
-  transition: all 0.4s ease-in-out 0.2s;
-}
-
-#burger:hover > .line {
-  background: #66ddff;
-}
-
-.line {
   position: absolute;
   width: 100%;
   height: 6px;
@@ -358,10 +322,16 @@ a {
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .container {
+    position: relative;
     right: -180px;
   }
 }
 /*footer*/
+footer {
+  position: relative;
+  height: 40px;
+}
+
 footer {
   position: relative;
   height: 40px;
@@ -372,6 +342,11 @@ footer {
   height: 40px;
   top: 40px;
   left: 60px;
+}
+
+ul {
+  position: relative;
+  bottom: 20px;
 }
 
 li.page_item.page-item-87 {
@@ -392,28 +367,14 @@ li.page_item.page-item-97 {
   left: 710px;
 }
 
-@media all and (max-width: 768px) {
-  .footer_menu {
-    top: 700px;
-  }
-  li.page_item.page-item-87 {
-    font-weight: 400;
-    size: 16px;
-    left: 250px;
-  }
-  li.page_item.page-item-95 {
-    font-weight: 400;
-    size: 16px;
-    left: 280px;
-    bottom: 4px;
-  }
-  li.page_item.page-item-97 {
-    font-weight: 400;
-    size: 16px;
-    left: 230px;
-    bottom: -50px;
-  }
+.separateur-3 {
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  width: 82em;
+  margin-left: 0px;
+  padding-bottom: 70px;
 }
+
 /* styles.css popup */
 .popup-contact {
   display: none;
@@ -449,7 +410,9 @@ li.page_item.page-item-97 {
 }
 
 #ouvrirPopupContact {
+  position: relative;
   margin-left: 1150px;
+  top: 20px;
 }
 
 ul {
@@ -571,7 +534,10 @@ h1 {
   }
 }
 /*bouton contact single-photo*/
-.button {
+.favorite.styled {
+  position: relative;
+  right: 700px;
+  top: 38px;
   background-color: #D8D8D8;
   border: transparent;
   border-radius: 2px;
@@ -586,15 +552,15 @@ h1 {
   align-items: center;
   width: 272px;
   height: 50px;
-  left: 280px;
   transition: background-color 0.5s ease-in-out;
 }
 
 h3 {
-  display: flex;
   font-family: "Space Mono", monospace;
-  justify-content: center;
-  align-items: center;
+}
+
+h3:hover {
+  color: white;
 }
 
 .separateur {
@@ -614,33 +580,6 @@ h3 {
   margin-left: 52px;
 }
 
-.favorite.styled {
-  position: relative;
-  width: 272px;
-  height: 50px;
-  right: 710px;
-}
-
-@media all and (max-width: 768px) {
-  .button {
-    top: 80px;
-  }
-  .img-container {
-    visibility: hidden;
-  }
-  .second-part-arrows {
-    visibility: hidden;
-  }
-  .entre {
-    position: relative;
-    left: 200px;
-    bottom: 20px;
-  }
-  .favorite.styled {
-    top: 50px;
-    left: 200px;
-  }
-}
 /*Vignettes photos*/
 .second-part-text {
   font-family: "poppins";
@@ -671,7 +610,7 @@ h3 {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
-  bottom: 50px;
+  bottom: 80px;
   right: 70px;
 }
 
@@ -681,13 +620,13 @@ h3 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  top: 90px;
+  top: 120px;
 }
 
 .img-container {
   position: relative;
   display: flex;
-  top: 90px;
+  top: 120px;
 }
 
 .previous-img, .next-img {
@@ -712,7 +651,7 @@ h3 {
 
 h2 {
   position: relative;
-  left: 50px;
+  left: 100px;
 }
 
 .images-sin {
@@ -769,7 +708,6 @@ h3:hover {
 }
 
 /* Sélecteur personnalisé */
-
 .custom-select {
   position: relative;
   width: 200px;
@@ -838,7 +776,7 @@ h3:hover {
 /*Filtres page accueil*/
 .filters {
   position: relative;
-  left: 65px;
+  left: 60px;
 }
 
 #filter-category.filter-category {
@@ -862,7 +800,7 @@ h3:hover {
 
 #filter-sort.filter-sort {
   position: relative;
-  left: 880px;
+  left: 950px;
   bottom: 40px;
   width: 240px;
   height: 42px;
@@ -1053,33 +991,4 @@ h3:hover {
   color: white;
   font-size: 24px;
   text-decoration: none;
-}
-
-.separateur-3 {
-  border-bottom: 1px solid #000;
-  display: inline-block;
-  width: 82em;
-  margin-left: 0px;
-  padding-bottom: 30px;
-}
-
-.popup-contact {
-  display: none; /* Cache la popup par défaut */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-}
-
-.popup-content-contact {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=style.css.map */
