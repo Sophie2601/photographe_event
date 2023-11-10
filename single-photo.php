@@ -134,40 +134,13 @@ get_header() ?>
     if (!is_wp_error($category_link)):
         ?>
         <div class="button-all">
-        <a href="<?php echo esc_url($category_link); ?>" class="btn view-all-photos center-flex">Toutes les photos</a>
+        <a href="<?php echo esc_url("http://localhost:10007"); ?>" class="btn view-all-photos center-flex">Toutes les photos</a>
         </div>
     <?php endif; ?>
-
 </aside>
 <?php get_footer(); ?>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const boutonContact = document.querySelector(".favorite.styled");
-  const popupContact = document.getElementById("popupContact");
-  const fermerPopupContact = document.getElementById("fermerPopupContact");
-  const refDisplayElement = document.getElementById('photoReference'); 
-  boutonContact.addEventListener("click", function() {
-      const photoRefElement = document.querySelector('.single-photo-txt:nth-child(4)');
-      let photoRef = "";
-      if (photoRefElement) {
-          photoRef = photoRefElement.textContent.split(' : ')[1].trim();
-      }
 
-      if (refDisplayElement) {
-          refDisplayElement.textContent = "Référence: " + photoRef; 
-      }
-
-      popupContact.style.display = "block";
-  });
-
-  fermerPopupContact.addEventListener("click", function() {
-      popupContact.style.display = "none"; 
-  });
-});
-</script>
-
-<?php get_footer(); ?>
 
 
 

@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
 /*Menu Burger*/
 
 // get Burger Icon Container

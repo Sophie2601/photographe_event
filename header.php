@@ -9,6 +9,12 @@
 
     <?php wp_head() ?>
 </head>
+<script>
+  jQuery(document).ready(function (){
+    var ref ="<?php echo get_post_meta(get_the_ID(), 'reference', true); ?>";
+    jQuery("#ref").val(ref);
+  });
+</script>
 <header>
 <?php
       if (function_exists('the_custom_logo')) {
